@@ -87,4 +87,18 @@ const projects = [
       }
     </div>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const projectButtons = document.querySelectorAll("button[data-url]");
+      projectButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const url = (button as HTMLElement).dataset.url;
+          if (url) {
+            window.open(url, "_blank");
+          }
+        });
+      });
+    });
+  </script>
 </Layout>
