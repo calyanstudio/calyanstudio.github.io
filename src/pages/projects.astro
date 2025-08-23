@@ -7,18 +7,21 @@ const projects = [
     description:
       "Online #1 Nepali News Portal from Sindhuli. A dynamic news platform delivering real-time updates and engaging content to its readers.",
     image: "https://placehold.co/400x250/e9ecef/343a40?text=Mero+Patra",
+    url: "https://www.meropatra.com/",
   },
   {
     title: "Janaprabhat School",
     description:
       "Comprehensive School Website. Designed to be an intuitive and informative hub for students, parents, and faculty.",
     image: "https://placehold.co/400x250/e9ecef/343a40?text=Janaprabhat+School",
+    url: "https://janaprabhat.edu.np/",
   },
   {
     title: "Kali Pokhari",
     description:
       "Online Nepali News Portal based on Kali Pokhari. Focused on local news and community events, fostering local engagement.",
     image: "https://placehold.co/400x250/e9ecef/343a40?text=Kali+Pokhari",
+    url: "https://kalipokhari.com/",
   },
   {
     title: "E-commerce Platform",
@@ -73,8 +76,10 @@ const projects = [
               </h2>
               <p class="text-base text-[#343a40]">{project.description}</p>
               <a
-                href="#"
+                href={project.url}
                 class="inline-block mt-4 text-[#007bff] font-semibold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Learn More <i class="fas fa-arrow-right ml-1 text-sm" />
               </a>
