@@ -9,47 +9,36 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16 max-w-screen-xl mx-auto"
   >
-        <section class="text-center mb-12">
-      <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-[#343a40]">
-        About Calyan Studio
-      </h1>
-      <p class="text-lg sm:text-xl text-[#6c757d] max-w-3xl mx-auto mb-8">
-        Calyan Studio transforms ideas into exceptional digital experiences.
-        Discover our journey, values, and passionate team.
-      </p>
-      <h2 class="text-3xl font-bold mb-8 text-[#343a40]">Our History</h2>
+    <section
+      class="relative h-96 bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image: url('/hero.jpg');"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative z-10 text-center px-4">
+        <h1 class="text-5xl sm:text-6xl font-bold mb-4">About Calyan Studio</h1>
+        <p class="text-xl sm:text-2xl max-w-3xl mx-auto">
+          Calyan Studio transforms ideas into exceptional digital experiences.
+          Discover our journey, values, and passionate team.
+        </p>
+      </div>
+    </section>
+
+    <section class="text-center py-12 bg-gray-100">
+      <h2 class="text-4xl font-bold mb-8 text-[#343a40]">Our History</h2>
       <p class="text-lg text-[#343a40] max-w-3xl mx-auto mb-8">
-        Founded in [Year of Founding], Calyan Studio started with a simple idea:
-        bridging innovative concepts with digital reality. We've grown, embracing
-        new technologies and pushing boundaries, always committed to our core values.
+        Founded in 2025, Calyan Studio started with a simple idea: bridging
+        innovative concepts with digital reality. We've grown, embracing new
+        technologies and pushing boundaries, always committed to our core
+        values.
       </p>
     </section>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 items-center">
-      <div class="bg-white p-8 rounded-lg shadow-xl h-full">
-        <h2 class="text-3xl font-bold mb-4 text-[#007bff]">Our Mission</h2>
-        <ul class="list-disc list-inside text-lg text-[#343a40] mb-4">
-          <li>Empower with cutting-edge digital solutions.</li>
-          <li>Craft impactful, user-centric experiences.</li>
-          <li>Drive significant growth and foster innovation.</li>
-          <li>Deliver robust, scalable, and goal-aligned solutions.</li>
-        </ul>
-      </div>
-      <div class="bg-white p-8 rounded-lg shadow-xl h-full">
-        <h2 class="text-3xl font-bold mb-4 text-[#007bff]">Our Vision</h2>
-        <ul class="list-disc list-inside text-lg text-[#343a40] mb-4">
-          <li>Globally recognized leader in digital solutions.</li>
-          <li>Unparalleled creativity and technical prowess.</li>
-          <li>Technology as a seamless extension of human potential.</li>
-          <li>Inspire, innovate, and positively impact the digital landscape.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="text-center mb-12">
+    <section class="text-center py-12 mb-12 bg-gray-50">
       <h2 class="text-4xl font-bold mb-12 text-[#343a40]">Our Core Values</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-102 transition-transform duration-300"
+        >
           <i class="fas fa-lightbulb text-4xl text-[#007bff] mb-4"></i>
           <h3 class="text-xl font-bold mb-2 text-[#343a40]">Innovation</h3>
           <p class="text-[#6c757d]">
@@ -57,7 +46,9 @@ import Layout from "../layouts/Layout.astro";
             deliver unique solutions.
           </p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-102 transition-transform duration-300"
+        >
           <i class="fas fa-handshake text-4xl text-[#007bff] mb-4"></i>
           <h3 class="text-xl font-bold mb-2 text-[#343a40]">Collaboration</h3>
           <p class="text-[#6c757d]">
@@ -65,7 +56,9 @@ import Layout from "../layouts/Layout.astro";
             goals and foster mutual growth.
           </p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-102 transition-transform duration-300"
+        >
           <i class="fas fa-award text-4xl text-[#007bff] mb-4"></i>
           <h3 class="text-xl font-bold mb-2 text-[#343a40]">Excellence</h3>
           <p class="text-[#6c757d]">
@@ -76,12 +69,14 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="text-center">
+    <section class="text-center py-12 bg-gray-100">
       <h2 class="text-4xl font-bold mb-12 text-[#343a40]">
         Meet Our Talented Team
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-lg shadow-xl">
+        <div
+          class="bg-white p-8 rounded-lg shadow-2xl transform hover:scale-102 transition-transform duration-300"
+        >
           <img
             src="/team/gaurav87565.jpg"
             alt="Gaurav Uchil"
@@ -110,7 +105,9 @@ import Layout from "../layouts/Layout.astro";
             </button>
           </div>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-xl">
+        <div
+          class="bg-white p-8 rounded-lg shadow-2xl transform hover:scale-102 transition-transform duration-300"
+        >
           <img
             src="/team/gtmsudarshan.jpg"
             alt="Sudarshan Gautam"
@@ -139,7 +136,9 @@ import Layout from "../layouts/Layout.astro";
             </button>
           </div>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-xl">
+        <div
+          class="bg-white p-8 rounded-lg shadow-2xl transform hover:scale-102 transition-transform duration-300"
+        >
           <img
             src="/team/kiratdewas.jpg"
             alt="Biraj Rai"
@@ -176,7 +175,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-    
   </main>
 </Layout>
 
