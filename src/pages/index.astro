@@ -3,28 +3,56 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home" description="Calyan Studio - Your partner for web, game, and app development.">
-	<main class="flex flex-col items-center justify-center text-center min-h-[calc(100vh-10rem)] px-4">
-		<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 text-[#212529]">Calyan Studio</h1>
-		<p class="text-xl sm:text-2xl lg:text-3xl text-[#6c757d] max-w-3xl mx-auto mb-8">We are a passionate team of developers and designers dedicated to creating beautiful and functional digital experiences.</p>
-		<a href="/projects" class="bg-[#007bff] hover:bg-[#0056b3] text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">View Our Work</a>
+	<main class="min-h-[calc(100vh-10rem)] px-4 py-8 md:py-12 lg:py-16 max-w-screen-xl mx-auto">
+		<section class="text-center mb-20">
+			<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 text-[#343a40]">Innovate. Create. Elevate.</h1>
+			<p class="text-xl sm:text-2xl lg:text-3xl text-[#6c757d] max-w-4xl mx-auto mb-10">We are Calyan Studio, a passionate team dedicated to crafting exceptional digital experiences in web, game, and app development.</p>
+			<a href="/projects" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg">Explore Our Portfolio</a>
+		</section>
 
-		<section class="mt-20 w-full max-w-5xl">
-			<h2 class="text-4xl font-bold mb-12 text-[#212529]">What We Do</h2>
+		<section class="mb-20">
+			<h2 class="text-4xl font-bold text-center mb-12 text-[#343a40]">Our Core Services</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="bg-[#f8f9fa] p-8 rounded-lg shadow-lg">
-					<i class="fas fa-globe text-5xl text-[#007bff] mb-4"></i>
-					<h3 class="text-2xl font-bold mb-2 text-[#212529]">Web Development</h3>
-					<p class="text-[#6c757d]">Crafting responsive and dynamic websites that engage your audience and drive results.</p>
+				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
+					<i class="fas fa-laptop-code text-6xl text-[#007bff] mb-6"></i>
+					<h3 class="text-2xl font-bold mb-3 text-[#343a40]">Web Development</h3>
+					<p class="text-[#6c757d]">Building responsive, high-performance websites and web applications tailored to your unique business needs.</p>
 				</div>
-				<div class="bg-[#f8f9fa] p-8 rounded-lg shadow-lg">
-					<i class="fas fa-gamepad text-5xl text-[#007bff] mb-4"></i>
-					<h3 class="text-2xl font-bold mb-2 text-[#212529]">Game Development</h3>
-					<p class="text-[#6c757d]">Building immersive and fun gaming experiences for various platforms.</p>
+				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
+					<i class="fas fa-gamepad text-6xl text-[#007bff] mb-6"></i>
+					<h3 class="text-2xl font-bold mb-3 text-[#343a40]">Game Development</h3>
+					<p class="text-[#6c757d]">Creating engaging and immersive gaming experiences across various platforms, from concept to launch.</p>
 				</div>
-				<div class="bg-[#f8f9fa] p-8 rounded-lg shadow-lg">
-					<i class="fas fa-mobile-alt text-5xl text-[#007bff] mb-4"></i>
-					<h3 class="text-2xl font-bold mb-2 text-[#212529]">App Development</h3>
-					<p class="text-[#6c757d]">Designing and developing intuitive mobile applications for iOS and Android.</p>
+				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
+					<i class="fas fa-mobile-alt text-6xl text-[#007bff] mb-6"></i>
+					<h3 class="text-2xl font-bold mb-3 text-[#343a40]">App Development</h3>
+					<p class="text-[#6c757d]">Designing and developing intuitive, feature-rich mobile applications for iOS and Android ecosystems.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="text-center mb-20">
+			<h2 class="text-4xl font-bold mb-12 text-[#343a40]">Why Choose Us?</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<i class="fas fa-lightbulb text-5xl text-[#007bff] mb-4"></i>
+					<h3 class="text-xl font-bold mb-2 text-[#343a40]">Innovative Solutions</h3>
+					<p class="text-[#6c757d]">We bring fresh ideas and cutting-edge technology to every project.</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<i class="fas fa-cogs text-5xl text-[#007bff] mb-4"></i>
+					<h3 class="text-xl font-bold mb-2 text-[#343a40]">Technical Expertise</h3>
+					<p class="text-[#6c757d]">Our team comprises skilled professionals with diverse technical backgrounds.</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<i class="fas fa-handshake text-5xl text-[#007bff] mb-4"></i>
+					<h3 class="text-xl font-bold mb-2 text-[#343a40]">Client-Centric Approach</h3>
+					<p class="text-[#6c757d]">Your vision is our priority. We work closely with you every step of the way.</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md">
+					<i class="fas fa-award text-5xl text-[#007bff] mb-4"></i>
+					<h3 class="text-xl font-bold mb-2 text-[#343a40]">Quality Assurance</h3>
+					<p class="text-[#6c757d]">We deliver robust, reliable, and high-performing solutions that stand the test of time.</p>
 				</div>
 			</div>
 		</section>

@@ -4,39 +4,53 @@ import Layout from '../layouts/Layout.astro';
 const projects = [
   {
     title: 'Mero Patra',
-    description: 'Online #1 Nepali News Portal from Sindhuli.',
+    description: 'Online #1 Nepali News Portal from Sindhuli. A dynamic news platform delivering real-time updates and engaging content to its readers.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=Mero+Patra',
   },
   {
     title: 'Janaprabhat School',
-    description: 'School Website.',
+    description: 'Comprehensive School Website. Designed to be an intuitive and informative hub for students, parents, and faculty.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=Janaprabhat+School',
   },
   {
     title: 'Kali Pokhari',
-    description: 'Online Nepali News Portal based on Kali Pokhari.',
+    description: 'Online Nepali News Portal based on Kali Pokhari. Focused on local news and community events, fostering local engagement.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=Kali+Pokhari',
   },
   {
     title: 'E-commerce Platform',
-    description: 'A robust e-commerce solution with secure payment gateways and intuitive user experience.',
+    description: 'A robust e-commerce solution with secure payment gateways and intuitive user experience, built for scalability and performance.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=E-commerce',
   },
   {
     title: 'Mobile Fitness App',
-    description: 'An engaging mobile application designed to help users track their fitness goals and progress.',
+    description: 'An engaging mobile application designed to help users track their fitness goals and progress, featuring personalized workouts and analytics.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=Fitness+App',
   },
   {
     title: 'AI Chatbot Integration',
-    description: 'Integrating advanced AI chatbots into existing systems for enhanced customer support.',
+    description: 'Integrating advanced AI chatbots into existing systems for enhanced customer support and streamlined communication workflows.',
+    image: 'https://placehold.co/400x250/e9ecef/343a40?text=AI+Chatbot',
   },
 ];
 ---
 
 <Layout title="Our Projects" description="Explore the web, game, and app development projects by Calyan Studio.">
-  <main class="flex flex-col items-center min-h-[calc(100vh-10rem)] px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-[#212529]">Our Projects</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+  <main class="min-h-[calc(100vh-10rem)] px-4 py-8 md:py-12 lg:py-16 max-w-screen-xl mx-auto">
+    <section class="text-center mb-20">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-[#343a40]">Our Recent Projects</h1>
+      <p class="text-lg sm:text-xl text-[#6c757d] max-w-3xl mx-auto">Discover our diverse portfolio of web, game, and app development projects that showcase our expertise and passion for innovation.</p>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map(project => (
-        <div class="bg-[#f8f9fa] p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#007bff]">{project.title}</h2>
-          <p class="text-base sm:text-lg text-[#6c757d]">{project.description}</p>
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105">
+          <img src={project.image} alt={project.title} class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h2 class="text-2xl font-bold mb-3 text-[#007bff]">{project.title}</h2>
+            <p class="text-base text-[#343a40]">{project.description}</p>
+            <a href="#" class="inline-block mt-4 text-[#007bff] hover:text-[#0056b3] font-semibold transition duration-300">Learn More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+          </div>
         </div>
       ))}
     </div>
