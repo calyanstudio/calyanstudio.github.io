@@ -40,30 +40,32 @@ const siteUrl = Astro.url.origin + Astro.url.pathname;
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
-	<body class="bg-[#f8f9fa] text-[#212529]">
-		<nav class="fixed top-0 left-0 right-0 bg-[#343a40] h-20 flex items-center justify-between px-8 shadow-md z-50">
-		  <a href="/" class="text-3xl text-[#007bff] hover:text-[#0056b3]"><i class="fas fa-home"></i></a>
+	<body class="bg-[#1a202c] text-[#e2e8f0]">
+		<nav class="fixed top-0 left-0 right-0 bg-[#2d3748] h-20 flex items-center justify-between px-8 shadow-md z-50">
+		  <a href="/" class="flex items-center gap-2">
+			<img src="https://placehold.co/150x50/2d3748/e2e8f0?text=Logo" alt="Calyan Studio Logo" class="h-12">
+		  </a>
 		  <div class="hidden md:flex gap-10">
-			<a href="/about" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-info-circle"></i> About</a>
-			<a href="/projects" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-project-diagram"></i> Projects</a>
-			<a href="/contact" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-envelope"></i> Contact</a>
+			<a href="/about" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-info-circle"></i> About</a>
+			<a href="/projects" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-project-diagram"></i> Projects</a>
+			<a href="/contact" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-envelope"></i> Contact</a>
 		  </div>
-		  <button id="mobile-menu-button" class="md:hidden text-3xl text-[#f8f9fa] hover:text-[#007bff]">
+		  <button id="mobile-menu-button" class="md:hidden text-3xl text-[#e2e8f0] hover:text-[#4299e1]">
 			<i class="fas fa-bars"></i>
 		  </button>
 		</nav>
 
-		<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-[#343a40] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
+		<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-[#2d3748] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
 			<div class="flex justify-end p-4">
-				<button id="close-mobile-menu" class="text-3xl text-[#f8f9fa] hover:text-[#007bff]">
+				<button id="close-mobile-menu" class="text-3xl text-[#e2e8f0] hover:text-[#4299e1]">
 					<i class="fas fa-times"></i>
 				</button>
 			</div>
 			<nav class="flex flex-col p-4 gap-6">
-				<a href="/" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-home"></i> Home</a>
-				<a href="/about" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-info-circle"></i> About</a>
-				<a href="/projects" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-project-diagram"></i> Projects</a>
-				<a href="/contact" class="text-xl text-[#f8f9fa] hover:text-[#007bff]"><i class="fas fa-envelope"></i> Contact</a>
+				<a href="/" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-home"></i> Home</a>
+				<a href="/about" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-info-circle"></i> About</a>
+				<a href="/projects" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-project-diagram"></i> Projects</a>
+				<a href="/contact" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-envelope"></i> Contact</a>
 			</nav>
 		</div>
 
