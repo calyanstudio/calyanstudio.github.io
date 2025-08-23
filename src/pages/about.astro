@@ -105,9 +105,9 @@ import Layout from "../layouts/Layout.astro";
           <h3 class="text-2xl font-bold text-[#343a40]">Gaurav Uchil</h3>
           <p class="text-[#6c757d]">CEO (Chief Executive Officer)</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="http://github.com/gaurav87565" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            <button data-url="http://github.com/gaurav87565" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-github"></i>
-            </a>
+            </button>
           </div>
         </div>
         <div
@@ -121,12 +121,12 @@ import Layout from "../layouts/Layout.astro";
           <h3 class="text-2xl font-bold text-[#343a40]">Sudarshan Gautam</h3>
           <p class="text-[#6c757d]">CTO (Chief Technology Officer)</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="https://www.facebook.com/realsudarshan" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            <button data-url="https://www.facebook.com/realsudarshan" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://github.com/GTMSudarshan" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            </button>
+            <button data-url="https://github.com/GTMSudarshan" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-github"></i>
-            </a>
+            </button>
           </div>
         </div>
         <div
@@ -140,15 +140,15 @@ import Layout from "../layouts/Layout.astro";
           <h3 class="text-2xl font-bold text-[#343a40]">Biraj Rai</h3>
           <p class="text-[#6c757d]">Berozgaar (Unemployed)</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="https://www.facebook.com/neppixel" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            <button data-url="https://www.facebook.com/neppixel" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://github.com/birajrai" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            </button>
+            <button data-url="https://github.com/birajrai" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kiratdewas/" class="text-[#007bff] hover:text-[#0056b3] text-2xl">
+            </button>
+            <button data-url="https://www.linkedin.com/in/kiratdewas/" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
               <i class="fab fa-linkedin"></i>
-            </a>
+            </button>
           </div>
         </div>
         <div
@@ -162,12 +162,12 @@ import Layout from "../layouts/Layout.astro";
           <h3 class="text-2xl font-bold text-[#343a40]">null</h3>
           <p class="text-[#6c757d]">null</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl"
-              ><i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl"
-              ><i class="fas fa-globe"></i>
-            </a>
+            <button data-url="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
+              <i class="fab fa-linkedin"></i>
+            </button>
+            <button data-url="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
+              <i class="fas fa-globe"></i>
+            </button>
           </div>
         </div>
         <div
@@ -182,12 +182,12 @@ import Layout from "../layouts/Layout.astro";
           <h3 class="text-2xl font-bold text-[#343a40]">null</h3>
           <p class="text-[#6c757d]">null</p>
           <div class="flex justify-center gap-4 mt-4">
-            <a href="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl"
-              ><i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl"
-              ><i class="fas fa-globe"></i>
-            </a>
+            <button data-url="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
+              <i class="fab fa-linkedin"></i>
+            </button>
+            <button data-url="#" class="text-[#007bff] hover:text-[#0056b3] text-2xl focus:outline-none">
+              <i class="fas fa-globe"></i>
+            </button>
           </div>
         </div>
         <div
@@ -214,3 +214,17 @@ import Layout from "../layouts/Layout.astro";
     </section>
   </main>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const socialButtons = document.querySelectorAll('button[data-url]');
+    socialButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const url = (button as HTMLElement).dataset.url;
+        if (url) {
+          window.open(url, '_blank');
+        }
+      });
+    });
+  });
+</script>
