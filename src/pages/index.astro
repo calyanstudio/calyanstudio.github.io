@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home" description="Calyan Studio - Your partner for web, game, and app development.">
 	<section class="relative min-h-[calc(100vh-4rem)] flex items-center justify-center text-center overflow-hidden">
-		<video autoplay loop playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 z-0">
+		<video id="hero-video" loop playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 z-0">
 			<source src="/hero.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
@@ -66,9 +66,22 @@ import Layout from '../layouts/Layout.astro';
 	</main>
 </Layout>
 
+<div id="robot-check-popup" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100]">
+  <div class="bg-white p-8 rounded-lg shadow-xl text-center max-w-sm w-full">
+    <h2 class="text-2xl font-bold mb-6 text-[#343a40]">Are you a robot?</h2>
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="robot-checkbox" class="form-checkbox h-6 w-6 text-[#007bff] rounded-md border-gray-300 focus:ring-[#007bff]">
+      <span class="ml-3 text-lg text-[#343a40]">I am not a robot</span>
+    </label>
+  </div>
+</div>
+
 <script is:inline>
   const heroH1 = document.getElementById('hero-h1');
   const heroP = document.getElementById('hero-p');
+  const heroVideo = document.getElementById('hero-video');
+  const robotCheckPopup = document.getElementById('robot-check-popup');
+  const robotCheckbox = document.getElementById('robot-checkbox');
 
   const phrases = [
     {
@@ -86,6 +99,7 @@ import Layout from '../layouts/Layout.astro';
   ];
 
   let currentPhraseIndex = 0;
+  let intervalId;
 
   function updateHeroText() {
     heroH1.classList.add('opacity-0');
@@ -101,9 +115,29 @@ import Layout from '../layouts/Layout.astro';
     }, 1000); // Duration of fade-out
   }
 
-  // Initial load
-  heroH1.textContent = phrases[0].h1;
-  heroP.textContent = phrases[0].p;
+  // Function to start video and animation
+  function startHeroContent() {
+    heroVideo.play();
+    // Initial load of text
+    heroH1.textContent = phrases[0].h1;
+    heroP.textContent = phrases[0].p;
+    intervalId = setInterval(updateHeroText, 3000); // Change every 3 seconds
+  }
 
-  setInterval(updateHeroText, 3000); // Change every 3 seconds
+  // Handle checkbox change
+  robotCheckbox.addEventListener('change', () => {
+    if (robotCheckbox.checked) {
+      robotCheckPopup.classList.add('opacity-0');
+      robotCheckPopup.classList.add('pointer-events-none');
+      setTimeout(() => {
+        robotCheckPopup.style.display = 'none';
+        startHeroContent();
+      }, 500); // Match transition duration
+    } else {
+      // Optionally handle uncheck if needed, though for a fake captcha, it's usually one-way
+    }
+  });
+
+  // Pause video initially
+  heroVideo.pause();
 </script>
