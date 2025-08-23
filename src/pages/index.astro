@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
 		</video>
 		<div class="absolute inset-0 bg-black opacity-60 z-10"></div>
 		<div class="relative z-20 text-white p-4 max-w-5xl mx-auto">
-			<h1 id="hero-h1" class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 drop-shadow-2xl transition-opacity duration-1000 opacity-100"></h1>
-			<p id="hero-p" class="text-xl sm:text-2xl lg:text-3xl mb-10 drop-shadow-xl transition-opacity duration-1000 opacity-100"></p>
+			<h1 id="hero-h1" class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 drop-shadow-2xl transition-opacity duration-1000 opacity-0"></h1>
+			<p id="hero-p" class="text-xl sm:text-2xl lg:text-3xl mb-10 drop-shadow-xl transition-opacity duration-1000 opacity-0"></p>
 
 		</div>
 	</section>
@@ -113,10 +113,14 @@ import Layout from '../layouts/Layout.astro';
   // Function to start video and animation
   function startHeroContent() {
     heroVideo.play();
-    // Initial load of text
-    heroH1.textContent = phrases[0].h1;
-    heroP.textContent = phrases[0].p;
-    intervalId = setInterval(updateHeroText, 3000); // Change every 3 seconds
+    // Initial load of text with a delay
+    setTimeout(() => {
+      heroH1.textContent = phrases[0].h1;
+      heroP.textContent = phrases[0].p;
+      heroH1.classList.remove('opacity-0');
+      heroP.classList.remove('opacity-0');
+      intervalId = setInterval(updateHeroText, 3000); // Change every 3 seconds
+    }, 1000); // 1-second delay before showing initial text
   }
 
   // Handle checkbox change
