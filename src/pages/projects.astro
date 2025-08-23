@@ -14,17 +14,29 @@ const projects = [
     title: 'Kali Pokhari',
     description: 'Online Nepali News Portal based on Kali Pokhari.',
   },
+  {
+    title: 'E-commerce Platform',
+    description: 'A robust e-commerce solution with secure payment gateways and intuitive user experience.',
+  },
+  {
+    title: 'Mobile Fitness App',
+    description: 'An engaging mobile application designed to help users track their fitness goals and progress.',
+  },
+  {
+    title: 'AI Chatbot Integration',
+    description: 'Integrating advanced AI chatbots into existing systems for enhanced customer support.',
+  },
 ];
 ---
 
 <Layout title="Our Projects" description="Explore the web, game, and app development projects by Calyan Studio.">
-  <main class="flex flex-col items-center min-h-[calc(100vh-4rem)] px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-[#e2e8f0]">Our Projects</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <main class="flex flex-col items-center min-h-[calc(100vh-10rem)] px-4">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-[#f0f0f0]">Our Projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
       {projects.map(project => (
-        <div class="bg-[#2d3748] p-6 rounded-lg shadow-md text-[#e2e8f0]">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#4299e1]">{project.title}</h2>
-          <p class="text-base sm:text-lg">{project.description}</p>
+        <div class="bg-[#2a2a2a] p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#007bff]">{project.title}</h2>
+          <p class="text-base sm:text-lg text-[#b0b0b0]">{project.description}</p>
         </div>
       ))}
     </div>
