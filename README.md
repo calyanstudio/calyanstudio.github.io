@@ -49,14 +49,7 @@ Contributions are welcome! Please feel free to open an issue or submit a pull re
 
 Thanks to all the wonderful contributors who have helped make this project better!
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+[![Contributors](https://contributors-img.web.app/image?repo=CalyanStudio/calyanstudio.github.io)](https://github.com/CalyanStudio/calyanstudio.github.io/graphs/contributors)
 
 
 ## License
