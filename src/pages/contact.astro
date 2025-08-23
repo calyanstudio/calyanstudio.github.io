@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-3xl font-bold mb-6 text-[#007bff]">
           Send Us a Message
         </h2>
-        <form class="space-y-6">
+        <form class="space-y-6" id="contactForm">
           <div>
             <label
               for="name"
@@ -119,4 +119,24 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const email = "calyan@meropatra.com";
+        const phone = "+977 98XXXXXXXX";
+        alert(
+          "Thank you for your message! Our form is currently undergoing maintenance.\n\nPlease contact us directly via email at " + 
+            email + 
+            " or by phone at " + 
+            phone + 
+            ". We apologize for any inconvenience."
+        );
+      });
+    }
+  });
+</script>
 </Layout>
