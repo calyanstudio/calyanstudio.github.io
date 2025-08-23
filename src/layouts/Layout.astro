@@ -9,6 +9,13 @@ const { title = 'Calyan Studio', description = 'Calyan Studio is a creative stud
 const siteTitle = title === 'Calyan Studio' ? title : `${title} | Calyan Studio`;
 const siteDescription = description;
 const siteUrl = Astro.url.origin + Astro.url.pathname;
+
+const navItems = [
+  { href: '/', icon: 'fas fa-home', text: 'Home' },
+  { href: '/about', icon: 'fas fa-info-circle', text: 'About' },
+  { href: '/projects', icon: 'fas fa-project-diagram', text: 'Projects' },
+  { href: '/contact', icon: 'fas fa-envelope', text: 'Contact' },
+];
 ---
 
 <!doctype html>
@@ -41,37 +48,40 @@ const siteUrl = Astro.url.origin + Astro.url.pathname;
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body class="bg-[#1a202c] text-[#e2e8f0]">
-		<nav class="fixed top-0 left-0 right-0 bg-[#2d3748] h-20 flex items-center justify-between px-8 shadow-md z-50">
+		<nav class="fixed top-0 left-0 right-0 bg-[#2d3748] h-16 flex items-center justify-between px-8 shadow-md z-50">
 		  <a href="/" class="flex items-center gap-2">
-			<img src="https://placehold.co/150x50/2d3748/e2e8f0?text=Logo" alt="Calyan Studio Logo" class="h-12">
+			<img src="https://placehold.co/150x40/2d3748/e2e8f0?text=Calyan" alt="Calyan Studio Logo" class="h-10">
 		  </a>
-		  <div class="hidden md:flex gap-10">
-			<a href="/about" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-info-circle"></i> About</a>
-			<a href="/projects" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-project-diagram"></i> Projects</a>
-			<a href="/contact" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-envelope"></i> Contact</a>
+		  <div class="hidden md:flex gap-8">
+			{navItems.map(item => (
+			  <a href={item.href} class="text-lg text-[#e2e8f0] hover:text-[#4299e1]">
+				<i class={item.icon}></i> {item.text === 'Home' ? '' : item.text}
+			  </a>
+			))}
 		  </div>
-		  <button id="mobile-menu-button" class="md:hidden text-3xl text-[#e2e8f0] hover:text-[#4299e1]">
+		  <button id="mobile-menu-button" class="md:hidden text-2xl text-[#e2e8f0] hover:text-[#4299e1]">
 			<i class="fas fa-bars"></i>
 		  </button>
 		</nav>
 
 		<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-[#2d3748] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
 			<div class="flex justify-end p-4">
-				<button id="close-mobile-menu" class="text-3xl text-[#e2e8f0] hover:text-[#4299e1]">
+				<button id="close-mobile-menu" class="text-2xl text-[#e2e8f0] hover:text-[#4299e1]">
 					<i class="fas fa-times"></i>
 				</button>
 			</div>
-			<nav class="flex flex-col p-4 gap-6">
-				<a href="/" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-home"></i> Home</a>
-				<a href="/about" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-info-circle"></i> About</a>
-				<a href="/projects" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-project-diagram"></i> Projects</a>
-				<a href="/contact" class="text-xl text-[#e2e8f0] hover:text-[#4299e1]"><i class="fas fa-envelope"></i> Contact</a>
+			<nav class="flex flex-col p-4 gap-4">
+				{navItems.map(item => (
+				  <a href={item.href} class="text-lg text-[#e2e8f0] hover:text-[#4299e1]">
+					<i class={item.icon}></i> {item.text}
+				  </a>
+				))}
 			</nav>
 		</div>
 
 		<div id="overlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
 
-		<div class="pt-20 px-4 md:px-8 lg:px-16">
+		<div class="pt-16 px-4 md:px-8 lg:px-16">
 			<slot />
 		</div>
 
