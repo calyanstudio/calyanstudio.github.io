@@ -18,12 +18,12 @@ const projects = [
 ---
 
 <Layout title="Our Projects" description="Explore the web, game, and app development projects by Calyan Studio.">
-  <main class="flex flex-col items-center min-h-[calc(100vh-8rem)] pt-16 px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-8">Our Projects</h1>
+  <main class="flex flex-col items-center min-h-[calc(100vh-10rem)] px-4">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-[#212529]">Our Projects</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map(project => (
-        <div class="bg-[#34495e] p-6 rounded-lg shadow-md">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#1abc9c]">{project.title}</h2>
+        <div class="bg-[#343a40] p-6 rounded-lg shadow-md text-[#f8f9fa]">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#007bff]">{project.title}</h2>
           <p class="text-base sm:text-lg">{project.description}</p>
         </div>
       ))}
