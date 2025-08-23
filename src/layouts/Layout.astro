@@ -1,3 +1,16 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Calyan Studio', description = 'Calyan Studio is a creative studio focused on web, game, and app development. We create stunning websites, engaging games, and innovative applications.' } = Astro.props;
+
+const siteTitle = title === 'Calyan Studio' ? title : `${title} | Calyan Studio`;
+const siteDescription = description;
+const siteUrl = Astro.url.origin + Astro.url.pathname;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,7 +18,26 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Calyan Studio</title>
+
+		<title>{siteTitle}</title>
+		<meta name="description" content={siteDescription} />
+		<meta name="keywords" content="Calyan Studio, web development, game development, app development, websites, games, applications, Nepal, Sindhuli" />
+		<link rel="canonical" href={siteUrl} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:title" content={siteTitle} />
+		<meta property="og:description" content={siteDescription} />
+		<meta property="og:image" content="/social-share.jpg" /> <!-- You might want to create a social share image -->
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={siteUrl} />
+		<meta property="twitter:title" content={siteTitle} />
+		<meta property="twitter:description" content={siteDescription} />
+		<meta property="twitter:image" content="/social-share.jpg" /> <!-- You might want to create a social share image -->
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body class="bg-[#2c3e50] text-[#ecf0f1]">
