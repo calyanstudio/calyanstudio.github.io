@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-trigger:
+on:
   push:
     branches:
       - main
