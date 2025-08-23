@@ -1,5 +1,12 @@
 # Calyan Studio
 
+[![Build Status](https://github.com/CalyanStudio/calyanstudio.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/CalyanStudio/calyanstudio.github.io/actions/workflows/deploy.yml)
+[![GitHub forks](https://img.shields.io/github/forks/CalyanStudio/calyanstudio.github.io?style=social)](https://github.com/CalyanStudio/calyanstudio.github.io/network)
+[![GitHub stars](https://img.shields.io/github/stars/CalyanStudio/calyanstudio.github.io?style=social)](https://github.com/CalyanStudio/calyanstudio.github.io/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/CalyanStudio/calyanstudio.github.io)](https://github.com/CalyanStudio/calyanstudio.github.io/commits/main)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/CalyanStudio/calyanstudio.github.io)](https://github.com/CalyanStudio/calyanstudio.github.io/graphs/contributors)
+
+
 ## Project Description
 This repository contains the source code for the Calyan Studio website, built with Astro.
 
@@ -37,6 +44,20 @@ To get a local copy up and running, follow these simple steps:
 
 ## Contributing
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
+
+## Contributors
+
+Thanks to all the wonderful contributors who have helped make this project better!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
