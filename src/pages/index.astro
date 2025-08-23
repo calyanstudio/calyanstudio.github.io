@@ -3,25 +3,32 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home" description="Calyan Studio - Your partner for web, game, and app development.">
-	<main class="min-h-[calc(100vh-10rem)] px-4 py-8 md:py-12 lg:py-16 max-w-screen-xl mx-auto">
-		<section class="text-center mb-20">
-			<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 text-[#343a40]">Innovate. Create. Elevate.</h1>
-			<p class="text-xl sm:text-2xl lg:text-3xl text-[#6c757d] max-w-4xl mx-auto mb-10">We are Calyan Studio, a passionate team dedicated to crafting exceptional digital experiences in web, game, and app development.</p>
+	<section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+		<video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 z-0">
+			<source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-light-moving-in-a-dark-background-3246-large.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+		<div class="relative z-20 text-white p-4 max-w-4xl mx-auto">
+			<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 drop-shadow-lg">Innovate. Create. Elevate.</h1>
+			<p class="text-xl sm:text-2xl lg:text-3xl mb-10 drop-shadow-md">We are Calyan Studio, a passionate team dedicated to crafting exceptional digital experiences in web, game, and app development.</p>
 			<a href="/projects" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg">Explore Our Portfolio</a>
-		</section>
+		</div>
+	</section>
 
+	<main class="px-4 py-8 md:py-12 lg:py-16 max-w-screen-xl mx-auto">
 		<section class="mb-20">
 			<h2 class="text-4xl font-bold text-center mb-12 text-[#343a40]">Our Core Services</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
 					<i class="fas fa-laptop-code text-6xl text-[#007bff] mb-6"></i>
 					<h3 class="text-2xl font-bold mb-3 text-[#343a40]">Web Development</h3>
-					<p class="text-[#6c757d]">Building responsive, high-performance websites and web applications tailored to your unique business needs.</p>
+					<p class="text-[#6c757d]">Crafting responsive and dynamic websites that engage your audience and drive results.</p>
 				</div>
 				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
 					<i class="fas fa-gamepad text-6xl text-[#007bff] mb-6"></i>
 					<h3 class="text-2xl font-bold mb-3 text-[#343a40]">Game Development</h3>
-					<p class="text-[#6c757d]">Creating engaging and immersive gaming experiences across various platforms, from concept to launch.</p>
+					<p class="text-[#6c757d]">Building immersive and fun gaming experiences for various platforms.</p>
 				</div>
 				<div class="bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-300 hover:scale-105">
 					<i class="fas fa-mobile-alt text-6xl text-[#007bff] mb-6"></i>
