@@ -5,6 +5,22 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <main class="flex flex-col items-center justify-center min-h-screen">
     <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-    <p class="text-lg">You can reach us at <a href="mailto:contact@calyanstudio.com" class="text-blue-400 hover:underline">contact@calyanstudio.com</a></p>
+    <p class="text-lg">You can reach us at <span class="email" data-user="naylac" data-domain="mopatemra.moc"></span></p>
   </main>
 </Layout>
+
+<style>
+  .email {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+</style>
+
+<script>
+  const emails = document.querySelectorAll('.email');
+  emails.forEach(email => {
+    const user = email.getAttribute('data-user');
+    const domain = email.getAttribute('data-domain');
+    email.innerHTML = `<a href="mailto:${user.split('').reverse().join('')}@${domain.split('').reverse().join('')}" class="text-blue-400 hover:underline">${user.split('').reverse().join('')}@${domain.split('').reverse().join('')}</a>`;
+  });
+</script>
