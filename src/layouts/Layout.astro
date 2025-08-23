@@ -54,6 +54,10 @@ const navItems = [
 		<meta property="twitter:image" content="/social-share.jpg" />
 		<!-- You might want to create a social share image -->
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -62,9 +66,9 @@ const navItems = [
 			referrerpolicy="no-referrer"
 		/>
 	</head>
-	<body class="bg-[#f0f2f5] text-[#343a40]">
+	<body class="bg-[#f0f2f5] text-[#343a40] font-poppins">
 		<nav
-			class="fixed top-0 left-0 right-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg h-16 flex items-center justify-between px-12 shadow-lg z-50"
+			class="fixed top-0 left-0 right-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg h-16 flex items-center justify-between px-12 shadow-lg z-50 font-montserrat"
 		>
 			<a href="/" class="flex items-center gap-2">
 				<img
@@ -127,7 +131,7 @@ const navItems = [
 		>
 		</div>
 
-		<div class="pt-16 pb-24">
+		<div class="pt-16 pb-24 font-roboto">
 			<slot />
 		</div>
 
