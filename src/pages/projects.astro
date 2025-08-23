@@ -75,14 +75,12 @@ const projects = [
                 {project.title}
               </h2>
               <p class="text-base text-[#343a40]">{project.description}</p>
-              <a
-                href={project.url}
-                class="inline-block mt-4 text-[#007bff] font-semibold"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                data-url={project.url}
+                class="inline-block mt-4 text-[#007bff] font-semibold focus:outline-none"
               >
                 Learn More <i class="fas fa-arrow-right ml-1 text-sm" />
-              </a>
+              </button>
             </div>
           </div>
         ))
